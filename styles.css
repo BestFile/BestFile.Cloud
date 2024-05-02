@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root {
+  --maincolor: #ce0c65;
+  --importantcolor: red;
+}
+
+a { color: initial; text-decoration: none;}
+body {
+  font-family: 'Roboto Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+}
+
+h1 {font-weight: 400;}
+.info {background: yellow; font-weight: 100; margin-top: 0px;}
+
+input[type="checkbox"]{ vertical-align: middle; }
+label, #file-list {display: contents;}
+
+#file-input {display: none;}
+
+.checkbox {display: block;}
+.checkbox:hover {font-weight:bold; cursor: pointer;}
+.logo {vertical-align: middle;}
+
+.table a {text-decoration: none; color: initial;}
+.tr { display: table-row; }
+.th,.td { display: table-cell; padding: 0 10px 0 10px; }
+.th {text-align: left; background: var(--maincolor); color: white; font-weight: bold;}
+.td:first-child {
+  white-space: nowrap;
+  overflow: clip;
+  text-overflow: ellipsis;
+  max-width: 40ch;
+}
+
+.tr:hover {cursor: pointer; color: white; background: var(--maincolor);}
+
+#upload-box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+  height: 120px;
+  background: #ffffff;
+  border: 3px solid var(--maincolor);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+#upload-box:hover {
+  color: white;
+  background: var(--maincolor);
+}
+
+#dynamic-status {
+  width: 100%;
+  text-align: center;
+  background: var(--maincolor);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#upload-box:hover #dynamic-status {
+  background-color: white;
+}
+
+#static-status, #static-status a {
+  color: white;
+  text-align: center;
+}
+#download-link {background: var(--importantcolor);}
+#download-link:hover {font-weight: bold;}
+#static-status a:hover {text-decoration: underline;}
+
+.blink { animation: blinker 1s linear infinite; }
+@keyframes blinker {
+  0% {visibility: hidden;}
+  50% {visibility: hidden;}
+  100% {visibility: visible;}
+}
